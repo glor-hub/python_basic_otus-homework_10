@@ -3,7 +3,7 @@ name: Pylint
 on: [push]
 
 jobs:
-  lint-and-tests:
+  lint-tests-and-tests-coverage:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -19,6 +19,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install -r requirements-dev.txt
+        pip install codecov
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
@@ -26,3 +27,6 @@ jobs:
       run: |
         cd horseshop
         python manage.py test
+    - name: Analysing the test сoverage using codecov
+      run: |
+        codecov
