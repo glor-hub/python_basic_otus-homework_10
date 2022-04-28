@@ -29,4 +29,5 @@ jobs:
     - name: Analysing the test сoverage using codecov
       run: |
         codecov
+        coverage run --source='.' manage.py test
         coverage report
