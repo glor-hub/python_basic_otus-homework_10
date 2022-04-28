@@ -1,8 +1,6 @@
 from django.core.management.base import BaseCommand
 
 from product.models import (
-    Product,
-    ProductProperty,
     Manufacturer,
 )
 
@@ -35,4 +33,3 @@ class Command(BaseCommand):
                                                phone=contacts[company]["phone"],
                                                email=contacts[company]["email"]
                                                )
-

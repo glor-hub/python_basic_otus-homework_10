@@ -8,4 +8,3 @@ class ShopUserCreateView(CreateView):
     model = ShopUser
     success_url = '/'
     form_class = ShopUserCreateForm
-
