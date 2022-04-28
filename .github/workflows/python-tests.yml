@@ -24,4 +24,5 @@ jobs:
         pylint $(git ls-files '*.py')
     - name: Run python tests
       run: |
+        cd horseshop
         python manage.py test
