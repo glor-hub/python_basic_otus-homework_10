@@ -29,5 +29,6 @@ jobs:
     - name: Analysing the test сoverage using codecov
       run: |
         codecov
+        cd horseshop
         coverage run --source='.' manage.py test
         coverage report
